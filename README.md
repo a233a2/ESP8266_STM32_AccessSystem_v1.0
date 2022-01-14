@@ -35,7 +35,7 @@ ESP8266_GND	GND
 舵机PWM		PB11(舵机应单独供电,不应接系统板取电,实测抖动较大)
 4*4键盘		PC13 PC15 PC1 PC3 PA1 PA3 PA5 PA7 
 
-## 主要参考了
+## 主要参考以及联系方式
 RC522官方程序
 https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266
 以及正点原子等各种技术文件
