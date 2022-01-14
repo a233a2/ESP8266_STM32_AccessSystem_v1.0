@@ -37,9 +37,9 @@ ESP8266_GND	GND
 
 ## 主要参考以及联系方式
 RC522官方程序
-https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266
-以及正点原子等各种技术文件
-作者Email sunjiyi666@foxmail.com技术问题可咨询,转载请标明出处.
-作者b站主页:https://space.bilibili.com/37767944?spm_id_from=333.1007.0.0
+https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266  
+以及正点原子等各种技术文件  
+作者Email sunjiyi666@foxmail.com技术问题可咨询,转载请标明出处.  
+作者b站主页:https://space.bilibili.com/37767944?spm_id_from=333.1007.0.0  
 
 ### 本项目来源于学校小电子比赛,项目荣获了一等奖,在此感谢参考到的开源项目作者们.
