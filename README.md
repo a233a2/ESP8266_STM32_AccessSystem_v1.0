@@ -21,19 +21,19 @@ IC模块:MFRC-RC522 模块
 ISD1820语音模块可以实现简单的语音留言功能。
 
 ## 接线到stm32
-RC522_ENABLE  	PA4
-RC522_RESET 	PC2
-RC522_SCK 	PA2
-RC522_MOSI 	PA0
-RC522_MISO_GET 	PA6
-RC522_IRQ 	程序未使用
-ESP8266_D4 	PB8 (可串联电阻,效果略好,当然也可以无视)
-ESP8266_3V	3.3 (在此使得两系统板共电源)
-ESP8266_GND	GND
-蜂鸣器IO		PB5
-0.96'OLED	GND 3.3 SCL SDA
-舵机PWM		PB11(舵机应单独供电,不应接系统板取电,实测抖动较大)
-4*4键盘		PC13 PC15 PC1 PC3 PA1 PA3 PA5 PA7 
+RC522_ENABLE  	PA4  
+RC522_RESET 	PC2  
+RC522_SCK 	PA2  
+RC522_MOSI 	PA0  
+RC522_MISO_GET 	PA6  
+RC522_IRQ 	程序未使用  
+ESP8266_D4 	PB8 (可串联电阻,效果略好,当然也可以无视)  
+ESP8266_3V	3.3 (在此使得两系统板共电源)  
+ESP8266_GND	GND  
+蜂鸣器IO		PB5  
+0.96'OLED	GND 3.3 SCL SDA  
+舵机PWM		PB11(舵机应单独供电,不应接系统板取电,实测抖动较大)  
+4*4键盘		PC13 PC15 PC1 PC3 PA1 PA3 PA5 PA7  
 
 ## 主要参考以及联系方式
 RC522官方程序
