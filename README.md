@@ -2,7 +2,7 @@
 宿舍可使用的简易门禁系统,支持WiFi 门禁卡 以及密码 三种开门方式.
 STM32_ESP8266_MainCode烧录到STM32F103(RCT6)开发板
 simplest_led通过Arduino烧录到ESP8266开发板
-使用MDK以及Arduino开发
+使用MDK以及Arduino开发 
 
 其实只用一个ESP8266即可完成该项目.但由于开发时不太会Arduino和不熟悉ESP...所以用了STM的芯片作为主控..如果不使用8266的话去使用较小的ESP-01S也是可以的.esp在此项目中只起到wifi控制的作用.
 该项目将在Github由本人开源持续完善,争取在我大四时让他成为可用且好用的状态.
@@ -39,4 +39,6 @@ ESP8266_GND	GND
 RC522官方程序
 https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266
 以及正点原子等各种技术文件
-作者Email sunjiyi666@foxmail.com技术问题可咨询
+作者Email sunjiyi666@foxmail.com技术问题可咨询,转载请标明出处.
+
+### 本项目来源于学校小电子比赛,项目荣获了一等奖,在此感谢参考到的开源项目作者们.
