@@ -36,7 +36,7 @@ ESP8266_GND	GND
 4*4键盘		PC13 PC15 PC1 PC3 PA1 PA3 PA5 PA7  
 
 ## 主要参考以及联系方式
-RC522官方程序
+RC522官方程序  
 https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266  
 以及正点原子等各种技术文件  
 作者Email sunjiyi666@foxmail.com技术问题可咨询,转载请标明出处.  
