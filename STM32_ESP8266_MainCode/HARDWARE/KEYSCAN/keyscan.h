@@ -9,15 +9,15 @@ extern u8 KEY_can(u8 mode);  	//按键扫描函数
 void KEY_BIGInit(void);//IO初始化
 
 
-#define L1  GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_1)//读取按键
+#define L1  GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_13)//读取按键
 #define L2  GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)//
 #define L3  GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5)//
 #define L4  GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_7)// 
  
-#define H1 PCout(13)
-#define H2 PCout(15)
-#define H3 PCout(1)
-#define H4 PCout(3)
+#define H1 PCout(10)
+#define H2 PCout(11)
+#define H3 PCout(12)
+#define H4 PCout(1)
 //#define S1 	'1'	
 //#define S2	'2'	
 //#define S3  '3'

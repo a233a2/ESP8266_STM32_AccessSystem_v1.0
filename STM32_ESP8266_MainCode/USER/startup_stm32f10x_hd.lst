@@ -564,11 +564,11 @@ ARM Macro Assembler    Page 9
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=..\obj\startup_stm32f10x_hd.d -o..\obj\startup_stm32f10x_hd.o -ID:
-\DeskTop.....IMPORTANT\STM32_RFID-RC522_ReadWrite_card_demo-master\USER\RTE -ID
-:\kEIL\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include -ID:\kEIL\CORE\ARM\CMSIS\In
-clude --predefine="__UVISION_VERSION SETA 514" --predefine="STM32F10X_HD SETA 1
-" --list=.\startup_stm32f10x_hd.lst ..\CORE\startup_stm32f10x_hd.s
+ork --depend=..\obj\startup_stm32f10x_hd.d -o..\obj\startup_stm32f10x_hd.o -I.\
+RTE\_RC522 -IE:\InsertSystem\Keil\STM32F1xx_DFP\2.3.0\Device\Include -IE:\Inser
+tSystem\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 529" --predefine=
+"STM32F10X_HD SETA 1" --list=.\startup_stm32f10x_hd.lst ..\CORE\startup_stm32f1
+0x_hd.s
 
 
 

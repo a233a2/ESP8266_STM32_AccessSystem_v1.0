@@ -4,7 +4,7 @@
 
 
 
-#define PWM0 PBout(11)// PB11
+#define PWM0 PBout(2)// PB2
 
 #define LED0 PBout(5)// PB5
 

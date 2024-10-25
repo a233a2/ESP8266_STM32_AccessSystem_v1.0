@@ -1,0 +1,245 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: shiyizhixinxin ZTJD, li, LIC=8VRJ7-ETLY9-12RLE-5NXK6-D6AJL-JAQC3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
+Toolchain Path:  E:\InsertSystem\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+C:\Users\ZTJD\Desktop\原先文件\RC522\USER\SPI.uvprojx
+Project File Date:  10/23/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\InsertSystem\ARM\ARMCC\Bin'
+Rebuild target 'RC522'
+compiling delay.c...
+compiling system_stm32f10x.c...
+compiling timer.c...
+compiling oled.c...
+compiling main.c...
+flash.h(11): warning:  #1-D: last line of file ends without a newline
+  //void ReadFlashData(uint32_t ReadAddress, uint8_t *dest_Data, uint32_t num);	
+..\HARDWARE\PWM\pwm.h(5): warning:  #1295-D: Deprecated declaration PWM_Init - give arg types
+  void PWM_Init();
+main.c(100): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(113): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(126): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(139): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(209): warning:  #174-D: expression has no effect
+  			card0_bit==0;card1_bit==0;card2_bit==0;card3_bit==0;card4_bit==0;card5_bit==0;
+main.c(274): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(287): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(300): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(313): warning:  #223-D: function "key_can" declared implicitly
+  					t=key_can();
+main.c(370): warning:  #223-D: function "key_can" declared implicitly
+  												t=key_can();
+main.c(383): warning:  #223-D: function "key_can" declared implicitly
+  												t=key_can();
+main.c(396): warning:  #223-D: function "key_can" declared implicitly
+  												t=key_can();
+main.c(409): warning:  #223-D: function "key_can" declared implicitly
+  												t=key_can();
+main.c: 20 warnings, 0 errors
+compiling led.c...
+compiling FLASH.c...
+compiling usart.c...
+compiling pwm.c...
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+compiling stm32f10x_it.c...
+compiling key.c...
+compiling exti.c...
+compiling keyscan.c...
+compiling rc522.c...
+..\HARDWARE\PWM\pwm.h(5): warning:  #1295-D: Deprecated declaration PWM_Init - give arg types
+  void PWM_Init();
+..\HARDWARE\RFID\rc522.c(230): warning:  #223-D: function "printf" declared implicitly
+  						 printf("\r\nThe User is:card_0\r\n");
+..\HARDWARE\RFID\rc522.c(243): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_1\r\n");
+..\HARDWARE\RFID\rc522.c(256): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_2\r\n");
+..\HARDWARE\RFID\rc522.c(270): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_3\r\n");
+..\HARDWARE\RFID\rc522.c(283): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_4\r\n");
+..\HARDWARE\RFID\rc522.c(296): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_5\r\n");
+..\HARDWARE\RFID\rc522.c(331): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_0\r\n");
+..\HARDWARE\RFID\rc522.c(336): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_1\r\n");
+..\HARDWARE\RFID\rc522.c(341): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_2\r\n");
+..\HARDWARE\RFID\rc522.c(347): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_3\r\n");
+..\HARDWARE\RFID\rc522.c(352): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_4\r\n");
+..\HARDWARE\RFID\rc522.c(369): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A) success\r\n");
+..\HARDWARE\RFID\rc522.c(373): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A) failed\r\n");
+..\HARDWARE\RFID\rc522.c(379): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B) success\r\n");
+..\HARDWARE\RFID\rc522.c(383): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B) failed\r\n");
+..\HARDWARE\RFID\rc522.c(395): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(404): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(411): warning:  #223-D: function "printf" declared implicitly
+          printf("Write the card after 1 second. Do not move the card!!!\r\n");
+..\HARDWARE\RFID\rc522.c(435): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(444): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(451): warning:  #223-D: function "printf" declared implicitly
+          printf("RC522_Handle() run finished after 1 second!\r\n");
+..\HARDWARE\RFID\rc522.c(480): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_0\r\n");
+..\HARDWARE\RFID\rc522.c(485): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_1\r\n");
+..\HARDWARE\RFID\rc522.c(502): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A) success\r\n");
+..\HARDWARE\RFID\rc522.c(506): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A) failed\r\n");
+..\HARDWARE\RFID\rc522.c(514): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B) success\r\n");
+..\HARDWARE\RFID\rc522.c(518): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B) failed\r\n");
+..\HARDWARE\RFID\rc522.c(530): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(539): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(550): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdWrite(RFID1) success\r\n");
+..\HARDWARE\RFID\rc522.c(554): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdWrite(RFID1) failed\r\n");
+..\HARDWARE\RFID\rc522.c(568): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A1) success\r\n");
+..\HARDWARE\RFID\rc522.c(572): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(A1) failed\r\n");
+..\HARDWARE\RFID\rc522.c(578): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B1) success\r\n");
+..\HARDWARE\RFID\rc522.c(582): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdAuthState(B1) failed\r\n");
+..\HARDWARE\RFID\rc522.c(594): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(603): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(614): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdWrite(RFID2) success\r\n");
+..\HARDWARE\RFID\rc522.c(618): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdWrite(RFID2) failed\r\n");
+..\HARDWARE\RFID\rc522.c(631): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(640): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(647): warning:  #223-D: function "printf" declared implicitly
+          printf("RC522_Handle1() run finished after 1 second!\r\n");
+..\HARDWARE\RFID\rc522.c(728): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User is:card_0\r\n");
+..\HARDWARE\RFID\rc522.c(732): warning:  #223-D: function "printf" declared implicitly
+              printf("\r\nThe User isn't:card_0\r\n");
+..\HARDWARE\RFID\rc522.c(772): warning:  #223-D: function "printf" declared implicitly
+                                      printf("PcdAuthState(A) success\r\n");
+..\HARDWARE\RFID\rc522.c(778): warning:  #223-D: function "printf" declared implicitly
+                                      printf(".");
+..\HARDWARE\RFID\rc522.c(785): warning:  #223-D: function "printf" declared implicitly
+                                      printf("PcdAuthState(B) success\r\n");
+..\HARDWARE\RFID\rc522.c(791): warning:  #223-D: function "printf" declared implicitly
+                                      printf(",");
+..\HARDWARE\RFID\rc522.c(810): warning:  #223-D: function "printf" declared implicitly
+              printf("DATA:");
+..\HARDWARE\RFID\rc522.c(819): warning:  #223-D: function "printf" declared implicitly
+              printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(1594): warning:  #223-D: function "printf" declared implicitly
+  		printf("UID don't match\r\n");
+..\HARDWARE\RFID\rc522.c(1605): warning:  #223-D: function "printf" declared implicitly
+  		printf("KEY don't match\r\n");
+..\HARDWARE\RFID\rc522.c(1614): warning:  #223-D: function "printf" declared implicitly
+  			printf("data:");
+..\HARDWARE\RFID\rc522.c(1623): warning:  #223-D: function "printf" declared implicitly
+  			printf("PcdRead() failed\r\n");
+..\HARDWARE\RFID\rc522.c(1632): warning:  #223-D: function "printf" declared implicitly
+  			printf("PcdWrite() finished\r\n");
+..\HARDWARE\RFID\rc522.c(1636): warning:  #223-D: function "printf" declared implicitly
+  			printf("PcdWrite() failed\r\n");
+..\HARDWARE\RFID\rc522.c(1644): warning:  #223-D: function "printf" declared implicitly
+  		printf("PcdHalt() finished\r\n");
+..\HARDWARE\RFID\rc522.c(1648): warning:  #223-D: function "printf" declared implicitly
+  		printf("PcdHalt() failed\r\n");
+..\HARDWARE\RFID\rc522.c(1667): warning:  #223-D: function "printf" declared implicitly
+      printf("ID>>>%s\r\n", num);
+..\HARDWARE\RFID\rc522.c: 60 warnings, 0 errors
+compiling stm32f10x_gpio.c...
+compiling misc.c...
+compiling stm32f10x_fsmc.c...
+compiling sys.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_flash.c...
+..\STM32F10x_FWLib\src\stm32f10x_flash.c(266): warning:  #550-D: variable "FLASHstatus"  was set but never used
+  		FLASH_Status FLASHstatus = FLASH_COMPLETE;
+..\STM32F10x_FWLib\src\stm32f10x_flash.c(288): warning:  #550-D: variable "NEW_ParArry"  was set but never used
+  	uint64_t NEW_ParArry[13] = {0};
+..\STM32F10x_FWLib\src\stm32f10x_flash.c(291): warning:  #177-D: variable "rdata"  was declared but never referenced
+  	uint64_t rdata = 0;
+..\STM32F10x_FWLib\src\stm32f10x_flash.c: 3 warnings, 0 errors
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=26468 RO-data=6744 RW-data=5968 ZI-data=3088  
+FromELF: creating hex file...
+"..\OBJ\SPI.axf" - 0 Error(s), 83 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_RC522
+  E:\InsertSystem\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

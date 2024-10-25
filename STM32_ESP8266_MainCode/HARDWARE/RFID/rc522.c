@@ -7,31 +7,13 @@
 #include "oled.h"
 #include "pwm.h"
 #include "stm32f10x_flash.h"
-//////////////////////////////////////////////////////////
-// M1����Ϊ16��������ÿ���������ĸ��飨��0����1����2����3�����
-// ��16��������64���鰴���Ե�ַ���Ϊ��0~63
-// ��0�������Ŀ�0�������Ե�ַ0�飩�����ڴ�ų��̴��룬�Ѿ��̻����ɸ���
-// ÿ�������Ŀ�0����1����2Ϊ���ݿ飬�����ڴ������
-// ÿ�������Ŀ�3Ϊ���ƿ飨���Ե�ַΪ:��3����7����11.....����������A����ȡ���ơ�����B��
 
-/*******************************
-*����˵����
-*1--SDA  <----->PA4
-*2--SCK  <----->PA5
-*3--MOSI <----->PA7
-*4--MISO <----->PA6
-*5--����
-*6--GND <----->GND
-*7--RST <----->PB0
-*8--VCC <----->VCC
-************************************/
 
-/*ȫ�ֱ���*/
-unsigned char CT[2];//������
-unsigned char SN[4]; //����
+unsigned char CT[2];
+unsigned char SN[4]; 
 
 unsigned char DATA[16];			//�������
-unsigned char RFID[16];			//���RFID
+unsigned char RFID[16];			
 unsigned char card0_bit=0;
 unsigned char card1_bit=0;
 unsigned char card2_bit=0;
@@ -39,7 +21,6 @@ unsigned char card3_bit=0;
 unsigned char card4_bit=0;
 unsigned char card5_bit=0;
 unsigned char total=0;
-// ��UID�������ⲻ֪����ɶ�õġ����� �滻���Լ�����UID
 unsigned char card_0[4];
 unsigned char card_1[4];
 unsigned char card_2[4];
@@ -49,26 +30,26 @@ unsigned char card_5[4];
 u8 KEY_A[6]= {0xff,0xff,0xff,0xff,0xff,0xff};
 u8 KEY_B[6]= {0xff,0xff,0xff,0xff,0xff,0xff};
 u8 AUDIO_OPEN[6] = {0xAA, 0x07, 0x02, 0x00, 0x09, 0xBC};
-// ������ 3��������
+
 unsigned char RFID1[16]= {0x10,0x20,0x30,0x40,0x50,0x60,0xff,0x07,0x80,0x29,0x01,0x02,0x03,0x04,0x05,0x06};
 unsigned char RFID2[16]= {0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x07,0x80,0x29,0xff,0xff,0xff,0xff,0xff,0xff};
-// ������ 3������Կ
+
 u8 KEY_A1[6]= {0x10,0x20,0x30,0x40,0x50,0x60};
 u8 KEY_A2[6]= {0x00,0x00,0x00,0x00,0x00,0x00};
 u8 KEY_B1[6]= {0x01,0x02,0x03,0x04,0x05,0x06};
 u8 KEY_B2[6]= {0x10,0x20,0x30,0x00,0x00,0x00};
 u8 KEY_B3[6]= {0x01,0x02,0x03,0x00,0x00,0x00};
-// ������
+
 unsigned char DATA0[16]= {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
 unsigned char DATA1[16]= {0x12,0x34,0x56,0x78,0x9A,0x00,0xff,0x07,0x80,0x29,0xff,0xff,0xff,0xff,0xff,0xff};
 unsigned char status;
-// 0x08 ����2����0���飨����9�飩
+
 unsigned char addr=0x08;
-// unsigned char addr=0x08;
 
 
-extern int DOOR;								//�ſ��صı�־λ 1Ϊ�� 0Ϊ��
-extern int CARD;						   //��Ƭ��־λ ��⵽��ƬΪ1,û��Ϊ0
+
+extern int DOOR;							
+extern int CARD;						 
 extern int CARD1;		
 #define   RC522_DELAY()  delay_us( 20 )
 
@@ -91,35 +72,10 @@ void DOOR_OPEN(void)
 }
 
 
-void WIFI_OPEN_DOOR(void)
-{
-//	DOOR=1;
-//	if(WIFI1==0)
-//	{		
-//		while(DOOR)
-//		{
-//		DOOR_OPEN();											//WiFi���ų���
-//		}
-//		
-//		LED0=1;           //2 ding! is ok
-//		delay_ms(100);
-//		LED0=0;
-//		delay_ms(100);		
-//		LED0=1;  		
-//		delay_ms(100);			
-//		LED0=0;
-//		delay_ms(5000);			
-//	}		
-}
-
-
-
 void RC522_MOVE_CARD(void)
 {
 	int i;
 		OLED_Init();
-//		OLED_ColorTurn(1);//0������ʾ��1 ��ɫ��ʾ
-//		OLED_DisplayTurn(0);//0������ʾ 1 ��Ļ��ת��ʾ
 	for(i=0;i<4;i++)
 	{
 			card_0[i]=0;
@@ -144,15 +100,15 @@ void RC522_MOVE_CARD(void)
 				delay_ms(100);			
 				LED0=0;
 		OLED_Clear();	
-		OLED_ShowString(7,28,"CARD ALL REMOVE",16);	
+		OLED_ShowString(7,28," All Remove",16);	
 		OLED_Refresh();
 		delay_ms(1000);		
 		OLED_Clear();	
-		OLED_ShowString(7,28,"CARD ALL REMOVE",16);	
+		OLED_ShowString(7,28," All Remove",16);	
 		OLED_Refresh();
 		delay_ms(1000);	
 		OLED_Clear();	
-		OLED_ShowString(7,28,"CARD ALL REMOVE",16);	
+		OLED_ShowString(7,28," All Remove",16);	
 		OLED_Refresh();
 		delay_ms(1000);			
 }
@@ -161,12 +117,10 @@ void RC522_READ_CARD(void)
 {
 		int i;
 		OLED_Init();
-//		OLED_ColorTurn(1);//0������ʾ��1 ��ɫ��ʾ
-//		OLED_DisplayTurn(0);//0������ʾ 1 ��Ļ��ת��ʾ
 		OLED_ShowString(7,28,"PUT CARD ON..",16);	
 		OLED_Refresh();	
-	  status = PcdRequest(PICC_REQALL,CT);//Ѱ��	
-		if(status==MI_OK)// Ѱ���ɹ�
+	  status = PcdRequest(PICC_REQALL,CT);	
+		if(status==MI_OK)
     {
 	    status=MI_ERR;
 			status = PcdAnticoll(SN);
@@ -263,11 +217,9 @@ void RC522_READ_CARD(void)
 
 void RC522_OPEN_DOOR(void)
 {
-//		OLED_Init();
-//		OLED_ColorTurn(1);//0������ʾ��1 ��ɫ��ʾ
-//		OLED_DisplayTurn(0);//0������ʾ 1 ��Ļ��ת��ʾ	
-	  status = PcdRequest(PICC_REQALL,CT);//Ѱ��
-	  if(status==MI_OK)// Ѱ���ɹ�
+
+	  status = PcdRequest(PICC_REQALL,CT);
+	  if(status==MI_OK)
     {
         status=MI_ERR;
 				status = PcdAnticoll(SN);
@@ -351,45 +303,28 @@ void RC522_OPEN_DOOR(void)
 									delay_ms(100);			
 									LED0=0;
         }
-//				else
-//				{
-//									LED0=1;
-//									delay_ms(500);
-//									LED0=0;
-//									delay_ms(100);			
-//									LED0=1;
-//									delay_ms(500);			
-//									LED0=0;
-//									delay_ms(100);					
-//									LED0=1;
-//									delay_ms(500);			
-//									LED0=0;
-//					
-//				}
-
     }
 }
 
-// ���Գ���0�����addr��д��
+
 void RC522_Handle(void)
 {
     u8 i = 0;
-    status = PcdRequest(PICC_REQALL,CT);//Ѱ��
+    status = PcdRequest(PICC_REQALL,CT);
 
-    // printf("\r\nstatus>>>>>>%d\r\n", status);
+   
 
-    if(status==MI_OK)// Ѱ���ɹ�
+    if(status==MI_OK)
     {
         status=MI_ERR;
-        status = PcdAnticoll(SN);// ����ײ ���UID ����SN
+        status = PcdAnticoll(SN);
     }
 
-    if (status==MI_OK)// ����ײ�ɹ�
+    if (status==MI_OK)
     {
         status = MI_ERR;
-        ShowID(SN); // ���ڴ�ӡ����ID�� UID
+        ShowID(SN); 
 
-        // �ѵ�����Ϊ�������ж��𡣡���
         if((SN[0]==card_0[0])&&(SN[1]==card_0[1])&&(SN[2]==card_0[2])&&(SN[3]==card_0[3]))
         {
             card0_bit=1;
@@ -423,7 +358,7 @@ void RC522_Handle(void)
     {
     }
 
-    if(status == MI_OK)//ѡ���ɹ�
+    if(status == MI_OK)
     {
         status = MI_ERR;
         // ��֤A��Կ ���ַ ���� SN

@@ -1,20 +1,8 @@
 #include "key.h"
 #include "delay.h"
-//////////////////////////////////////////////////////////////////////////////////	 
-//������ֻ��ѧϰʹ�ã�δ���������ɣ��������������κ���;
-//ALIENTEK Mini STM32������
-//�������� ��������		   
-//����ԭ��@ALIENTEK
-//������̳:www.openedv.com
-//�޸�����:2014/3/06
-//�汾��V1.0
-//��Ȩ���У�����ؾ���
-//Copyright(C) �������������ӿƼ����޹�˾ 2009-2019
-//All rights reserved									   
-//////////////////////////////////////////////////////////////////////////////////	 
+ 
  	    
-//������ʼ������ 
-//PA15��PC5 ���ó�����
+//PA15和PC5是选择按键和确定按键
 void KEY_Init(void)
 {
 	
@@ -31,21 +19,9 @@ void KEY_Init(void)
 	GPIO_InitStructure.GPIO_Pin  = GPIO_Pin_5;//PC5
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; //���ó���������
  	GPIO_Init(GPIOC, &GPIO_InitStructure);//��ʼ��GPIOC5
- 
-//	GPIO_InitStructure.GPIO_Pin  = GPIO_Pin_0;//PA0
-//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD; //PA0���ó����룬Ĭ������	  
-//	GPIO_Init(GPIOA, &GPIO_InitStructure);//��ʼ��GPIOA.0
 	
 } 
-//������������
-//���ذ���ֵ
-//mode:0,��֧��������;1,֧��������;
-//����ֵ��
-//0��û���κΰ�������
-//KEY0_PRES��KEY0����
-//KEY1_PRES��KEY1����
-//WKUP_PRES��WK_UP���� 
-//ע��˺�������Ӧ���ȼ�,KEY0>KEY1>WK_UP!!
+
 u8 KEY_Scan(u8 mode)
 {	 
 	static u8 key_up=1;//�������ɿ���־
